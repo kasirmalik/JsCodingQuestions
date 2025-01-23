@@ -45,4 +45,11 @@
     }
     console.log(palindrome1("abba")) // output: true
     console.log(palindrome("abba")) // output: true
+
+    // using every method to check if the string is a palindrome
+    function palindrome5(str) {
+        return str.split("").every((char, i) => {
+            return char === str[str.length - i - 1]
+        })
+    }
 </script>
