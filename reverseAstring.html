@@ -37,7 +37,14 @@ function reverseString (str3) {
     return reversed
     
 }
-// 
+// reverse a integer
+function reverseInt(int) {
+    // using the toString method to convert the integer to a string
+    const reversed = int.toString().split("").reverse().join("");
+    // using the parseInt method to convert the string to an integer
+    return parseInt(reversed) * Math.sign(int)
+}
+console.log(reverseInt(123)) // output: 321
 console.log(reverseString("reverseString")) // output: gnirtSesrever
 console.log(reverseString2("using")) // output: gnisu
 console.log(reverseString("hello")) // output: olleh
