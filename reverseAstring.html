@@ -1,0 +1,46 @@
+<script>
+// 1. Reverse a string
+// Write a function that takes a string as input and returns the string reversed.
+
+
+function reverseString(str) {
+    let reversed = ""
+    // using for loop to reverse the string
+    for (let i =0 ; i<str.length; i++){
+        // adding the character to the reversed string
+        reversed = str[i] + reversed
+    }
+    return reversed
+
+}
+
+// using the function to reverse the string
+function reverseString2(str2) {
+    // using the split method to split the string into an array
+    let splitString = str2.split("");
+    // using the reverse method to reverse the array
+    let reverseArray = splitString.reverse();
+    // using the join method to join the array into a string
+    let joinArray = reverseArray.join("");
+    // returning the reversed string
+    return joinArray
+    
+};
+// using the function to reverse the string
+function reverseString (str3) {
+    let reversed = ""
+    // using for loop to reverse the string
+    for (let char of str3){
+        // adding the character to the reversed string
+        reversed = char + reversed
+    };
+    return reversed
+    
+}
+// 
+console.log(reverseString("reverseString")) // output: gnirtSesrever
+console.log(reverseString2("using")) // output: gnisu
+console.log(reverseString("hello")) // output: olleh
+
+
+</script>
