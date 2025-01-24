@@ -1,0 +1,42 @@
+<script>
+    // --- Directions
+    // Given a string, return the charcter that is most
+    // commonly used in the string
+    // --- Example
+    // maxChar("abcccccccd") --> "c"
+    // maxChar("apple 1111") --> "1"
+
+    function maxChar(str) {
+        const charMap = {};
+        for (let char of str){
+            if (charMap[char]) {
+                charMap[char] += 1;
+
+            }else {
+                charMap[char] = 1;
+            }
+        }
+        return charMap
+    };
+    // using object.entries
+    function maxChar1(str) {
+        const charMap = {};
+        let max = 0;
+        let maxChar = '';
+        // for (let char of str){
+        //     if (charMap[char]) {
+        //         charMap[char] += 1;
+        //     }else{
+        //         charMap[char] = 1;
+        //     }
+        // };
+        for (const [key,value] of Object.entries(charMap)){
+             if(value >max){
+                max = value;
+                maxChar = key;
+             }
+        }
+        return maxChar;
+    }
+    console.log(maxChar("abccccaacc"))
+</script>
