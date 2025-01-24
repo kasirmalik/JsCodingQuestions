@@ -1,0 +1,18 @@
+<script>
+    // --- Directions
+    // given an array and chunk size , divide the array into subarray
+    // where each subarray is of length size
+    // ---Examples
+    // chunk([1, 2, 3, 4, 5, 6,] ----> [[1, 2, 3], [4, 5, 6]]
+
+    function chunk(array,size) {
+        let result = [];
+        let index = 0;
+        while (index < array.length) {
+         result.push(array.slice(index,index + size));
+         index += size;
+        }
+       return result;
+    }
+    console.log(chunk([1,2,3,4],2))
+</script>
