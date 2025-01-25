@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // --Directions 
+        // check to see if two provided strings are anagrams of each other
+        // one string is anagram of another if it uses same characters
+        // in the same qauntity. only consider charcter, not spaces
+        // or punctution, consider letters to be the same as lower case
+        // ---examples 
+        // anagram('coding money ', 'money coding') returns true
+        // anagram('abc', 'bac') returns true
+
+        function charMap(str) {
+            const charmap = {};
+            str= str.toLowerCase().replace(/[\W]/g,'')
+            for(let char of str){
+                charmap[char] = ++charmap[char] || 1
+            }
+            return charmap
+        }
+
+        function anagram(stringA,stringB) {
+            const charmapA =charMap(stringA)
+            const charmapB =charMap(stringB)
+
+           // compare 
+           if(Object.keys(charmapA).length !== Object.keys(charmapB).length) return false
+           for(let key in charmapA){
+            if(charmapA[key] !== charmapB[key]) return false
+           }
+           return true
+        
+
+          
+        };
+        console.log(anagram("RAIL! SAFETY","fairy tales"))
+    </script>
+</body>
+</html>
