@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    // ----Directions 
+    // write a function that returns an number of vowels
+    // used in a string. Vowels are the charcters 'a', 'e', 'i', 'o', 'u'
+    // --Examples
+    //vovels ("Hi There")
+    function vowels(str) {
+        const vowelCheck = ['a', 'e', 'i', 'o', 'u']
+        let count = 0 
+        for (let char of str.lowerCase()) {
+          if(vowelCheck.includes(char)) count ++ 
+        }
+        return count
+    //    const matches= str.match([/[aeiou]/gi])
+    //    return matches ? matches.length : 0
+    }
+    console.log(vowels("aeiou"))
+   </script> 
+</body>
+</html>
