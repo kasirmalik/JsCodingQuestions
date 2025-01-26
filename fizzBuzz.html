@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // --Directions
+        // Write a program that console logs the number
+        // from 1 to n , But for multiples of three and five print "Fizz" and "Buzz" respectively
+        // For numbers which are multiples of both three and five print "FizzBuzz"
+        // --Example
+        // Input: 15
+        // Output: 1, 2, Fizz, 4, Buzz, Fizz
+        function fizzBuzz(n) {
+            for (let i = 0; i <=n; i++) {
+            if(i % 3 === 0 && i % 5 === 0) {
+                console.log('fizzbuzz')
+                } else if (i % 3 === 0) {
+                    console.log('fizz');
+                } else if (i % 5 === 0) {
+                    console.log('buzz');
+                } else {
+                    console.log(i);
+                }
+            }
+        }
+        fizzBuzz(15);
+    </script>
+</body>
+</html>
